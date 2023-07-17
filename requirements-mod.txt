@@ -1,0 +1,7 @@
+
+baselines @ git+https://github.com/HumanCompatibleAI/baselines.git@f70377
+stable-baselines @ git+https://github.com/hill-a/stable-baselines.git@6fbc9a9
+ilqr @ git+https://github.com/anassinator/ilqr.git
+gym[mujoco]==0.15.4
+mujoco-py-131 @ git+https://github.com/AdamGleave/mujoco-py.git@mj131
+gym_compete @ git+https://github.com/HumanCompatibleAI/multiagent-competition.git@3a3f9dc

@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  adversarial:
+    build:
+      context: .
+      dockerfile: Dockerfile-mod
+    network_mode: host
+    environment:
+      - MUJOCO_KEY=www.roboti.us/file/mjkey.txt
+    volumes:
+      - ./src:/adversarial-policies/src
+    stdin_open: true
+    tty: true
