@@ -9,7 +9,7 @@ import pkgutil
 from typing import Callable, Iterable
 
 from gym.spaces import Box
-from sacred import Experiment
+from sacred import Experiment, SETTINGS
 from sacred.observers import FileStorageObserver
 import stable_baselines
 from stable_baselines.common import callbacks
@@ -38,6 +38,7 @@ from aprl.training.lookback import DebugVenv, LookbackRewardVecWrapper, OldMujoc
 from aprl.training.scheduling import ConstantAnnealer, Scheduler
 from aprl.training.shaping_wrappers import apply_embedded_agent_wrapper, apply_reward_wrapper
 
+SETTINGS['CAPTURE_MODE'] = 'sys'
 train_ex = Experiment("train")
 pylog = logging.getLogger("aprl.train")
 
