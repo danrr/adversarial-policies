@@ -9,5 +9,6 @@ services:
       - MUJOCO_KEY=www.roboti.us/file/mjkey.txt
     volumes:
       - ./src:/adversarial-policies/src
+      - ./data:/adversarial-policies/data
     stdin_open: true
     tty: true
