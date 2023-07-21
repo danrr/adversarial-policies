@@ -12,7 +12,7 @@ cffi==1.13.2
 chardet==3.0.4
 Click==7.0
 cloudpickle==1.2.2
-codecov==2.0.15
+codecov
 codespell==1.16.0
 colorama==0.4.1
 coverage==4.5.4
