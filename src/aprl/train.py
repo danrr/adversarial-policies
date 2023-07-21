@@ -385,7 +385,8 @@ def no_embed():
 
 
 PAPER_HYPERPARAMS = dict(
-    total_timesteps=int(20e6),
+    # total_timesteps=int(20e6),
+    total_timesteps=int(20),
     batch_size=16384,
     learning_rate=3e-4,
     rl_args=dict(ent_coef=0.0, nminibatches=4, noptepochs=4),
