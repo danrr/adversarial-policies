@@ -89,7 +89,7 @@ pytest-xdist==1.30.0
 python-dateutil==2.8.1
 pytype==2019.11.27
 pytz==2019.3
-PyYAML==5.2
+PyYAML
 ray==0.7.6
 redis==3.3.11
 regex==2019.11.1
