@@ -1,7 +1,8 @@
 FROM humancompatibleai/adversarial_policies
+RUN pip install --upgrade pip
 RUN pip uninstall -y gym-compete baselines stable-baselines
-COPY ./requirements-mod.txt /adversarial-policies/
-RUN pip install -r /adversarial-policies/requirements-mod.txt
+COPY ./requirements.txt /adversarial-policies/
+RUN pip install -r /adversarial-policies/requirements.txt
 RUN pip install -e .
 RUN curl -o /root/.mujoco/mjkey.txt https://www.roboti.us/file/mjkey.txt
 

@@ -381,34 +381,34 @@ def _summary_plot(order=None):
     plot_cfg = {
         "subplots": [
             [
-                {
-                    "filter": {"env_name": "multicomp/KickAndDefend-v0", "victim_path": 2},
-                    "title": "Kick and Defend 2",
-                },
+                # {
+                #     "filter": {"env_name": "multicomp/KickAndDefend-v0", "victim_path": 2},
+                #     "title": "Kick and Defend 2",
+                # },
                 {
                     "filter": {"env_name": "multicomp/YouShallNotPassHumans-v0", "victim_path": 1},
                     "title": "You Shall Not Pass 1",
                 },
-                {
-                    "filter": {"env_name": "multicomp/SumoHumansAutoContact-v0", "victim_path": 2},
-                    "title": "Sumo Humans 2",
-                },
+                # {
+                #     "filter": {"env_name": "multicomp/SumoHumansAutoContact-v0", "victim_path": 2},
+                #     "title": "Sumo Humans 2",
+                # },
             ],
         ]
     }
-    if order is not None:
-        plot_cfg["subplots"][0] = [plot_cfg["subplots"][0][i] for i in order]
+    # if order is not None:
+    #     plot_cfg["subplots"][0] = [plot_cfg["subplots"][0][i] for i in order]
     del order
 
     ci = None
-    tb_dir = os.path.join("data", "aws", "multi_train", "paper", "20190429_011349")
+    tb_dir = os.path.join("data", "baselines", "20231011_143941-default")
     return locals()
 
 
 @visualize_training_ex.named_config
 def paper_config():
     locals().update(_summary_plot())
-    fig_dir = os.path.expanduser("~/dev/adversarial-policies-paper/figs/training_single")
+    fig_dir = os.path.expanduser("/adversarial-policies/data/figs/training_single")
     styles = ["paper", "monolithic"]
     _ = locals()  # quieten flake8 unused variable warning
     del _

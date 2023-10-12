@@ -141,11 +141,12 @@ def _save_video_or_metadata(env_dir: str, saved_video_path: str) -> bool:
 
 @score_ex.config
 def default_score_config():
-    env_name = "multicomp/SumoAnts-v0"  # Gym env ID
+    # env_name = "multicomp/SumoAnts-v0"  # Gym env ID
+    env_name = "multicomp/YouShallNotPassHumans-v0"  # Gym env ID
     agent_a_type = "zoo"  # type supported by aprl.policies.loader
     agent_a_path = "1"  # path or other unique identifier
     agent_b_type = "zoo"  # type supported by aprl.policies.loader
-    agent_b_path = "2"  # path or other unique identifier
+    agent_b_path = "1"  # path or other unique identifier
     record_traj = False  # whether to record trajectories
     record_traj_params = {  # parameters for recording trajectories
         "save_dir": "data/trajectories",  # directory to save trajectories to

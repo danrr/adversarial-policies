@@ -1,5 +1,12 @@
-[![CircleCI](https://circleci.com/gh/HumanCompatibleAI/adversarial-policies.svg?style=svg)](https://circleci.com/gh/HumanCompatibleAI/adversarial-policies)
-[![codecov](https://codecov.io/gh/HumanCompatibleAI/adversarial-policies/branch/master/graph/badge.svg)](https://codecov.io/gh/HumanCompatibleAI/adversarial-policies)
+
+Train with paper config:
+> docker exec adversarial-policies-adversarial-1 python -m aprl.train with env_name=multicomp/YouShallNotPassHumans-v0 paper
+
+
+Score with video (update path):
+> docker exec adversarial-policies-adversarial-1 vendor/Xdummy-entrypoint python -m aprl.score_agent with videos=1 agent_a_path=data/baselines/20231011_143941-default/final_model agent_a_type=ppo2
+
+change line 404 in `src/aprl/visualize/training.py`
 
 Codebase to train, evaluate and analyze adversarial policies: policies attacking a fixed victim
 agent in a multi-agent system. See [paper](https://arxiv.org/abs/1905.10615) for more information.

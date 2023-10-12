@@ -15,25 +15,25 @@ pylog = logging.getLogger("aprl.envs.gym_compete")
 
 POLICY_STATEFUL = OrderedDict(
     [
-        ("KickAndDefend-v0", True),
-        ("RunToGoalAnts-v0", False),
-        ("RunToGoalHumans-v0", False),
-        ("SumoAnts-v0", True),
-        ("SumoHumans-v0", True),
+        # ("KickAndDefend-v0", True),
+        # ("RunToGoalAnts-v0", False),
+        # ("RunToGoalHumans-v0", False),
+        # ("SumoAnts-v0", True),
+        # ("SumoHumans-v0", True),
         ("YouShallNotPassHumans-v0", False),
     ]
 )
 
 NUM_ZOO_POLICIES = defaultdict(lambda: 1)
-NUM_ZOO_POLICIES.update({"SumoHumans-v0": 3, "SumoAnts-v0": 4, "KickAndDefend-v0": 3})
+# NUM_ZOO_POLICIES.update({"SumoHumans-v0": 3, "SumoAnts-v0": 4, "KickAndDefend-v0": 3})
 
 SYMMETRIC_ENV = OrderedDict(
     [
-        ("KickAndDefend-v0", False),
-        ("RunToGoalAnts-v0", True),
-        ("RunToGoalHumans-v0", True),
-        ("SumoAnts-v0", True),
-        ("SumoHumans-v0", True),
+        # ("KickAndDefend-v0", False),
+        # ("RunToGoalAnts-v0", True),
+        # ("RunToGoalHumans-v0", True),
+        # ("SumoAnts-v0", True),
+        # ("SumoHumans-v0", True),
         ("YouShallNotPassHumans-v0", False),
     ]
 )

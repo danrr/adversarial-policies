@@ -1,14 +1,17 @@
 version: "3.7"
 services:
   adversarial:
-    build:
-      context: .
-      dockerfile: Dockerfile-mod
+    image: b66f7f06b7d0
+#    build:
+#      context: .
+#      dockerfile: Dockerfile-mod
+#      shm_size: '16gb'
     network_mode: host
     environment:
       - MUJOCO_KEY=www.roboti.us/file/mjkey.txt
     volumes:
-      - ./src:/adversarial-policies/src
+      - ./src:/adversarial-policies/src:ro
       - ./data:/adversarial-policies/data
     stdin_open: true
     tty: true
+    command: bash

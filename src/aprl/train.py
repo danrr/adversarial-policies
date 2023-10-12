@@ -266,6 +266,7 @@ def ppo2(batch_size, num_env, learning_rate, **kwargs):
         callback_mul=batch_size,
         n_steps=batch_size // num_env,
         learning_rate=learning_rate,
+        _seed=1000,
         **kwargs,
     )
 

@@ -254,10 +254,8 @@ def test_activation_pipeline(test_cfg):
                             "resources_per_trial": {"cpu": 2},  # CI build only has 2 cores
                         },
                         "sync_config": {
-                            "upload_dir": os.path.join(tmpdir, "ray"),
-                            "sync_to_cloud": (
-                                "mkdir -p {target} && " "rsync -rlptv {source}/ {target}"
-                            ),
+                            "upload_dir": None,  # do not upload test results anywhere
+                            "sync_to_cloud": None,  # as above
                         },
                     },
                     "init_kwargs": {"num_cpus": 2},  # CI build only has 2 cores

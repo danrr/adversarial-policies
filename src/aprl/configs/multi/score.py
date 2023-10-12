@@ -86,7 +86,7 @@ def _to_fn(cfg: str) -> AgentConfigGenFn:
     if cfg_type == "zoo":
         assert not rem
         return _zoo
-    elif cfg == "fixed":
+    elif cfg_type == "fixed":
         assert not rem
         return _fixed
     elif cfg_type == "adversary":
